@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Academy - Empower Your Skills</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70vh;
+            gap: 2rem;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+            animation: floatImage 6s ease-in-out infinite;
+        }
+        @keyframes floatImage {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 2rem;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><span>Logic</span>Academy</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+        <div class="auth-buttons" id="auth-buttons">
+            <!-- Populated by JS -->
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Master the bold <br><span class="text-gradient">Tech Skills</span> of tomorrow.</h1>
+                <p>Join our marketplace to discover premium courses taught by industry experts. Elevate your career with Logic Academy.</p>
+                <a href="courses.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Explore Courses</a>
+            </div>
+            <div class="hero-image">
+                <!-- Using a tech-themed placeholder -->
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Coding">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Logic Academy Marketplace. All rights reserved.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+</body>
+</html>

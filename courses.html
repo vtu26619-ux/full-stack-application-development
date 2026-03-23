@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Logic Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .courses-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .search-container {
+            flex: 1;
+            min-width: 300px;
+        }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .course-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+        .course-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .course-instructor {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        .course-desc {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        .course-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><span>Logic</span>Academy</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html" style="color: var(--primary);">Courses</a></li>
+        </ul>
+        <div class="auth-buttons" id="auth-buttons"></div>
+    </nav>
+
+    <main>
+        <div class="courses-header">
+            <div>
+                <h1>Explore Courses</h1>
+                <p class="text-muted">Find the perfect course to enhance your skills</p>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search courses by title...">
+            </div>
+        </div>
+
+        <div id="loader" class="loading-container" style="display: none;">
+            <div class="loader"></div>
+        </div>
+
+        <div id="errorContainer" class="form-error" style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;"></div>
+
+        <div class="courses-grid" id="coursesGrid">
+            <!-- Populated by JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Logic Academy Marketplace. All rights reserved.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>
